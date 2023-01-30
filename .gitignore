@@ -1,0 +1,6 @@
+.idea/
+target/bin/
+bin
+*.exe
+vendor
+*.log
