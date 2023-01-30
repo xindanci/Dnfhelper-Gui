@@ -1,12 +1,12 @@
 package gui
 
 import (
+	"dnfheler/helper"
 	"github.com/twgh/xcgui/widget"
 	"github.com/twgh/xcgui/window"
 	"github.com/twgh/xcgui/xc"
 	"github.com/twgh/xcgui/xcc"
 	"time"
-	"xctest/helper"
 )
 
 func Dashboard() {

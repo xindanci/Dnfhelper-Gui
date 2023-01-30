@@ -1,19 +1,21 @@
 package main
 
 import (
+	"dnfheler/gui"
 	_ "embed"
+	"fmt"
 	"github.com/twgh/xcgui/app"
 	"github.com/twgh/xcgui/xc"
 	"os"
-	"xctest/gui"
 )
 
 //go:embed resource/ui.dll
 var dll []byte
 
 func main() {
-	_ = os.WriteFile("ui.dll", dll, 0666)
-	_ = xc.SetXcguiPath("ui.dll")
+	dllDir := fmt.Sprintf("%s\\ui.dll", os.TempDir())
+	_ = os.WriteFile(dllDir, dll, 0666)
+	_ = xc.SetXcguiPath(dllDir)
 	a := app.New(true)
 
 	gui.LoginView(a)

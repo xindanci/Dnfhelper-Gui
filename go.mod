@@ -1,4 +1,4 @@
-module xctest
+module dnfheler
 
 go 1.17
 
