@@ -8,7 +8,7 @@ import (
 	"xctest/gui"
 )
 
-//go:embed ui.dll
+//go:embed resource/ui.dll
 var dll []byte
 
 func main() {
