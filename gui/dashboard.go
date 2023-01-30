@@ -1,7 +1,6 @@
 package gui
 
 import (
-	"dnfheler/helper"
 	"github.com/twgh/xcgui/widget"
 	"github.com/twgh/xcgui/window"
 	"github.com/twgh/xcgui/xc"
@@ -33,7 +32,7 @@ func Dashboard() {
 	go func() {
 		for {
 			time.Sleep(time.Second)
-			runTime.SetText(helper.GetAppRunTime())
+			runTime.SetText(GetAppRunTime())
 		}
 	}()
 
