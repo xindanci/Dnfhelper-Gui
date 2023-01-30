@@ -1,2 +1,4 @@
 github.com/twgh/xcgui v1.3.372 h1:qPbvE3pFVIHJyQ4GGKgBkArFwpiVDGsGljV+2CjwqEk=
 github.com/twgh/xcgui v1.3.372/go.mod h1:xdtlFSRAIrHxx66v0LTg8S/1vdMdQBoHk5WVTn7cjrE=
+golang.org/x/sys v0.4.0 h1:Zr2JFtRQNX3BCZ8YtxRE9hNJYC8J6I1MVbMg6owUp18=
+golang.org/x/sys v0.4.0/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
