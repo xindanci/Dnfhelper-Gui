@@ -1,4 +1,4 @@
-package api
+package win
 
 import (
 	"golang.org/x/sys/windows"
@@ -36,9 +36,9 @@ func SendInput(nInputs uint32, pInputs unsafe.Pointer, cbSize uint32) (result ui
 	return
 }
 
-func ToUnicodeEx(virtKey syscall.Handle, scanCode syscall.Handle, keyState *uint16, pwszBuff *uint16) (handle syscall.Handle, err error) {
+func ToUnicodeEx(key syscall.Handle, scanCode syscall.Handle, keyState *uint16, pwszBuff *uint16) (handle syscall.Handle, err error) {
 	r0, _, e1 := procToUnicodeEx.Call(
-		uintptr(virtKey),
+		uintptr(key),
 		uintptr(scanCode),
 		uintptr(unsafe.Pointer(keyState)),
 		uintptr(unsafe.Pointer(pwszBuff)),

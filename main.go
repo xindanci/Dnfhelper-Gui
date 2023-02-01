@@ -4,7 +4,6 @@ import (
 	"dnfheler/gui"
 	_ "embed"
 	"fmt"
-	"github.com/twgh/xcgui/app"
 	"github.com/twgh/xcgui/xc"
 	"os"
 )
@@ -16,10 +15,10 @@ func main() {
 	dllDir := fmt.Sprintf("%s\\ui.dll", os.TempDir())
 	_ = os.WriteFile(dllDir, dll, 0666)
 	_ = xc.SetXcguiPath(dllDir)
-	a := app.New(true)
+	app := gui.NewGui()
 
-	gui.LoginView(a)
+	app.LoginView()
 
-	a.Run()
-	a.Exit()
+	app.Run()
+	app.Exit()
 }

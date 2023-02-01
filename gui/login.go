@@ -1,14 +1,13 @@
 package gui
 
 import (
-	"github.com/twgh/xcgui/app"
 	"github.com/twgh/xcgui/widget"
 	"github.com/twgh/xcgui/window"
 	"github.com/twgh/xcgui/xc"
 	"github.com/twgh/xcgui/xcc"
 )
 
-func LoginView(a *app.App) {
+func (u *UI) LoginView() {
 	w := window.New(0, 0, 350, 200, "gopher助手", 0, xcc.Window_Style_Modal)
 	// 设置窗口图标
 	w.SetIcon(xc.XImage_LoadSvgStringW(svgIcon))
@@ -24,11 +23,11 @@ func LoginView(a *app.App) {
 	loginBut := widget.NewButton(135, 122, 86, 26, "登录", w.Handle)
 	loginBut.Event_BnClick(func(pbHandled *bool) int {
 		if card.GetTextEx() != "admin" {
-			a.Alert("信息:", "卡密错误")
+			u.app.Alert("信息:", "卡密错误")
 			return 0
 		}
 		w.CloseWindow()
-		Dashboard()
+		u.dashboard()
 		return 0
 	})
 
